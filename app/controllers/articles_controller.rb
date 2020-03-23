@@ -20,7 +20,10 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-
+    @article.author_id = params[:author_id]
+    @article.user = current_user
+    @category = Category.find_by(id: params[:id])
+    @article.category_id = @category.id
       if @article.save
         redirect_to @article, notice: 'Article was successfully created.'
       else
@@ -48,6 +51,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:title, :text, :image, :author_id)
+      params.require(:article).permit(:title, :text, :image, :id, category_attributes: [:id])
     end
 end

@@ -1,6 +1,6 @@
 <%= form_with(model: article, local: true) do |form| %>
   <% if article.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class = "alert alert-danger">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
       <ul>
@@ -12,12 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :author_id %>
-    <%= form.number_field :author_id %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="field">
-    <%= form.file_field :image %>
+    <%= form.fields_for :categories do |f| %>
+        <%= f.label :category %>
+        <select name="id">
+          <% category_all.each do |category| %>
+        <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+  </select>
+    <% end %>
   </div>
 
   <div class="field">
