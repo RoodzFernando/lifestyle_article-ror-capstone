@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Preview</th>
       <th>Author</th>
       <th>Title</th>
       <th>Text</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
+        <td><%= image_tag article.image.url(:thumb) if article.image.exists? %></td>
         <td><%= article.author_id %></td>
         <td><%= article.title %></td>
         <td><%= article.text %></td>

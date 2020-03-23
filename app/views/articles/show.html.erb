@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag @article.image.url(:medium) %>
+</p>
+<p>
   <strong>Author:</strong>
   <%= @article.author_id %>
 </p>

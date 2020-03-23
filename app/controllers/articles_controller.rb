@@ -26,7 +26,6 @@ class ArticlesController < ApplicationController
       else
         render :new
       end
-    end
   end
 
   def update
@@ -35,14 +34,12 @@ class ArticlesController < ApplicationController
       else
         render :edit
       end
-    end
   end
 
 
   def destroy
     @article.destroy
       redirect_to articles_url, notice: 'Article was successfully destroyed.'
-    end
   end
 
   private
@@ -51,6 +48,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:title, :text, :image, :id, category_attributes: [:id])
+      params.require(:article).permit(:title, :text, :image, :author_id)
     end
 end
