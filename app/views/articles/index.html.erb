@@ -19,7 +19,7 @@
       <tr>
         <td><%= category_name(article.id) %></td>
         <td><%= image_tag article.image.url(:thumb) if article.image.exists? %></td>
-        <td><%= article.author_id %></td>
+        <td><%= article.user.name.capitalize %></td>
         <td><%= article.title %></td>
         <td><%= article.text %></td>
         <td><%= link_to 'Show', article %></td>
