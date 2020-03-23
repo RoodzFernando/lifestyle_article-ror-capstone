@@ -1,0 +1,7 @@
+<h1>Register page</h1>
+<%= form_for(:user, url: users_path) do |f| %>
+    <%= render 'shared/errors' %>
+    <%= f.text_field :name %>
+    <%= f.submit "Register" %>
+<% end %>
+
