@@ -6,6 +6,8 @@ class Article < ApplicationRecord
     accepts_nested_attributes_for :category
     has_many :votes
 
+    scope :most_recent, -> { order(created_at: :asc) }
+
     def self.most_voted
             left_joins(:votes).group(:id).order('COUNT(votes.article_id) DESC').limit(1)
     end

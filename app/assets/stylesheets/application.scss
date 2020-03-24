@@ -1,1 +1,12 @@
 @import "bootstrap/scss/bootstrap";
+.category_name {
+    display: flex;
+    // border: 1px solid #000;
+    height: 150px;
+    background: lightgreen;
+    .category-item {
+        width: calc(100%/4);
+        height: 150px;
+        border: 1px solid #000;
+    }
+}

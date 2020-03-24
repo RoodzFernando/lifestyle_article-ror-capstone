@@ -29,3 +29,15 @@
     </p>
 <% end %>
 
+    <div class="category_name">
+<% category_list.each do |category| %>
+        <div class="category-item">
+            <%= category.name %>
+            <% recent_article.each do |recent| %>
+                <%= recent.title %>
+                <%= image_tag recent.image.url(:thumb) %>
+            <% end %>
+        </div>
+<% end %>
+    </div>
+
