@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   root 'homepage#index'
   resources :users
-  get    '/vote',   to: 'votes#create'
+  resources :votes, only: [:show]
 end

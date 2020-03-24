@@ -4,10 +4,12 @@ module HomepageHelper
     end
 
     def category_list
-        @category_priority = Category.most_prioritized_category
+        @category_priority = Category.order('priority ASC').limit(4)
+        @test = Article.select("title").where(category_id: @category_priority.ids)
     end
 
+
     def recent_article
-        @article_recent = Article.most_recent
+        @article_recent = Article.order('created_at DESC').select('title').limit(4)
     end
 end

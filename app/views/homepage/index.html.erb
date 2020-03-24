@@ -32,12 +32,23 @@
     <div class="category_name">
 <% category_list.each do |category| %>
         <div class="category-item">
-            <%= category.name %>
-            <% recent_article.each do |recent| %>
-                <%= recent.title %>
-                <%= image_tag recent.image.url(:thumb) %>
-            <% end %>
+
+
+            <%= @test[0].title %> <br>
+            <%= @test[1].title %> <br>
+            <%= @test[2].title %> <br>
+            <%= @test[3].title %> <br>
+
         </div>
 <% end %>
     </div>
 
+
+<% if false %>
+    <% recent_article.each do |recent| %>
+            <p>
+                    <%= recent.title %>
+            </p>
+
+                <% end %>
+<% end %>
