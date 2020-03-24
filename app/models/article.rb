@@ -7,9 +7,7 @@ class Article < ApplicationRecord
     has_many :votes
 
     def self.most_voted
-        find_by_sql("SELECT title, text, count(articles.id) AS vote_count FROM articles
-                        INNER JOIN votes
-                        on articles.id = votes.article_id GROUP BY articles.id ORDER by vote_count DESC LIMIT 1")
+            left_joins(:votes).group(:id).order('COUNT(votes.article_id) DESC').limit(1)
     end
 
     validates :title, presence: true, length: {maximum: 150}
