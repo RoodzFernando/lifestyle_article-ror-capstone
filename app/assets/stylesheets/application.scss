@@ -13,11 +13,25 @@
 
 .article-card {
     border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .article-img {
+        width: 48%;
+        margin-right: 4.5%;
+    }
     .article-content {
         display: flex;
+        border: 1px solid blue;
+        background: #F5F5F5;
     }
     .article-text {
         border: 1px solid red;
-        width: 30%;
+        width: 48%;
+        word-wrap: break-word;
+        padding-left: 3%;
+        h5 {
+            color: #FE6001;
+        }
     }
 }

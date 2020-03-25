@@ -1,23 +1,22 @@
-<h1>
-    <% @category_name.each do |category| %>
-        <%= category.name %>
-    <% end %>
-</h1>
 
-
-
-<%= @articles_filtered.each do |article| %>
-    <div class="article-card">
+<div class="article-card">
+    <% for article in @articles_filtered %>
         <div class="article-content">
             <div class="article-img">
                 <%= image_tag article.image.url(:medium) %> <br>
             </div>
             <div class="article-text">
+                <h5>
+                    <% @category_name.each do |category| %>
+                        <%= category.name %>
+                    <% end %>
+                </h5>
                 <%= article.title %> <br>
                 <%= article.text %> <br>
             </div>
         </div>
-    </div>
-<% end %>
+    <% end %>
+</div>
+
 
 
