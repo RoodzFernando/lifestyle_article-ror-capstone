@@ -1,0 +1,15 @@
+<h1>
+    <% @category_name.each do |category| %>
+        <%= category.name %>
+    <% end %>
+</h1>
+
+
+
+<%= @articles_filtered.each do |article| %>
+    <%= image_tag article.image.url(:medium) %> <br>
+    <%= article.title %> <br>
+    <%= article.text %> <br>
+<% end %>
+
+<% console %>

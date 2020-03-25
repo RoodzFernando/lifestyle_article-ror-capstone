@@ -32,13 +32,8 @@
     <div class="category_name">
 <% category_list.each do |category| %>
         <div class="category-item">
-
-
-            <%= @test[0].title %> <br>
-            <%= @test[1].title %> <br>
-            <%= @test[2].title %> <br>
-            <%= @test[3].title %> <br>
-
+            <%= category.name %> <br>
+            <%= @category_list.size %>
         </div>
 <% end %>
     </div>
