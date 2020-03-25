@@ -7,9 +7,17 @@
 
 
 <%= @articles_filtered.each do |article| %>
-    <%= image_tag article.image.url(:medium) %> <br>
-    <%= article.title %> <br>
-    <%= article.text %> <br>
+    <div class="article-card">
+        <div class="article-content">
+            <div class="article-img">
+                <%= image_tag article.image.url(:medium) %> <br>
+            </div>
+            <div class="article-text">
+                <%= article.title %> <br>
+                <%= article.text %> <br>
+            </div>
+        </div>
+    </div>
 <% end %>
 
-<% console %>
+
