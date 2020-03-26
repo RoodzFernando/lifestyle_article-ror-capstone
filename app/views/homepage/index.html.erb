@@ -1,45 +1,36 @@
-<h1>Homepage</h1>
+<% provide(:title, "Homepage") %>
 
-<% if false %>
-<p>
-    <%= article_all.title %>
-</p>
-
-<p>
-    <%= article_all.text %>
-</p>
-
-<p>
-    <%= image_tag(article_all.image.url) %>
-</p>
-
-<% end %>
-
-<% article_all.each do |article| %>
-    <p>
-        <%= article.title  %>
-    </p>
-
-    <p>
-        <%= article.text  %>
-    </p>
-
-    <p>
-        <%= image_tag article.image.url(:medium)  %>
-    </p>
-<% end %>
-
-    <div class="category_name">
-<% for category in category_list %>
-        <div class="category-item">
-            <div class="category-img">
-            </div>
-            <%= category.name %> <br>
-            <%= category.title %> <br>
-                <%=  image_tag category.image.url(:medium) %> <br>
-        </div>
-<% end %>
+    <div class="article-home">
+        <% article_all.each do |article| %>
+            <div class="article-home-card">
+                <div class="article-img">
+                    <div class="article-text">
+                        <h2><%= article.title %></h2>
+                        <p><%= article.text  %></p>
+                    </div>
+                    <%= image_tag article.image.url(:medium)  %>
+                </div>
+        <% end %>
     </div>
 
-    <% console %>
+        <div class="user-info">
+            <h3><%= current_user.name.titleize if logged_in? %></h3>
+            <p> has <%= pluralize(current_user.articles.count, 'article') %></p>
+        </div>
+    </div>
+
+    <div class="category_name">
+        <% for category in category_list %>
+                <div class="category-item">
+                    <div class="category-name">
+                        <h3><%= category.name %><h3>
+                    </div>
+                    <div class="category-title">
+                        <h4><%= category.title %><h4>
+                    </div>
+                    <%=  image_tag category.image.url(:medium) %>
+                </div>
+        <% end %>
+    </div>
+
 

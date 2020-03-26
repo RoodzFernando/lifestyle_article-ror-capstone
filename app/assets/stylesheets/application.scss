@@ -1,16 +1,79 @@
 @import "bootstrap/scss/bootstrap";
-.category_name {
+$orange: #FE6001;
+$white: #FFF;
+// Homepage
+.article-home {
     display: flex;
-    // border: 1px solid #000;
-    height: 150px;
-    background: lightgreen;
-    .category-item {
-        width: calc(100%/4);
-        height: 150px;
-        border: 1px solid #000;
+    .article-home-card {
+        width: 75%;
+        .article-img {
+            background: grey;
+            height: 550px;
+            img {
+                width: 100%;
+                height: 550px;
+            }
+            .article-text {
+                position: absolute;
+                top: 520px;
+                margin-left: 10px;
+                h2 {
+                    color: $orange;
+                    font-size: 22px;
+                }
+                p {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .user-info {
+        width: 25%;
+        padding-top: 25px;
+        padding-left: 10px;
+        background: grey;
+        color: $white;
+        p {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
     }
 }
 
+.category_name {
+    display: flex;
+    background: lightgreen;
+    .category-item {
+        width: calc(100%/4);
+        height: 250px;
+        position: relative;
+        img {
+            width: 100%;
+            height: 250px;
+        }
+        .category-name {
+            position: absolute;
+            color: $white;
+            padding-left: 10px;
+            h3:first-child {
+                border-bottom: 2px solid #EFED06;
+                padding-bottom: 1px;
+            }
+        }
+        .category-title {
+            position: absolute;
+            top: 150px;
+            padding-left: 5px;
+            color: $white;
+            h4 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+//
 .article-card {
     border: 1px solid #000;
     display: grid;
