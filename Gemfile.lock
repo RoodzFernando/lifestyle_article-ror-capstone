@@ -99,6 +99,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
+    pg (1.2.3-x64-mingw32)
     puma (4.3.3)
       nio4r (~> 2.0)
     rack (2.2.2)
@@ -186,6 +187,7 @@ DEPENDENCIES
   faker (~> 2.10, >= 2.10.2)
   jbuilder (~> 2.7)
   paperclip (~> 6.1)
+  pg (~> 1.2, >= 1.2.3)
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.2)
   sass-rails (>= 6)
