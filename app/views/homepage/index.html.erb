@@ -15,7 +15,7 @@
 
         <div class="user-info">
             <h3><%= current_user.name.titleize if logged_in? %></h3>
-            <p> has <%= pluralize(current_user.articles.count, 'article') %></p>
+            <p>  <%= has pluralize(current_user.articles.count, 'article') if logged_in? %></p>
         </div>
     </div>
 
