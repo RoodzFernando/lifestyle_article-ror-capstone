@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if user
       log_in user
       redirect_to user
-      flash[:success] = "Welcome #{user.name.capitalize}!"
+      flash[:success] = "Welcome #{user.name.titleize}!"
     else
       flash.now[:danger] = 'Name is invalid.'
       render 'new'
