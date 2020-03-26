@@ -25,7 +25,6 @@
     </p>
 
     <p>
-        <%= article.image.url  %>
         <%= image_tag article.image.url(:medium)  %>
     </p>
 <% end %>
@@ -33,10 +32,11 @@
     <div class="category_name">
 <% for category in category_list %>
         <div class="category-item">
+            <div class="category-img">
+            </div>
             <%= category.name %> <br>
             <%= category.title %> <br>
-            <%= category.text %> <br>
-            <%=  image_tag category.image.url(:medium) %> <br>
+                <%=  image_tag category.image.url(:medium) %> <br>
         </div>
 <% end %>
     </div>
