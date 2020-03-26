@@ -25,25 +25,19 @@
     </p>
 
     <p>
+        <%= article.image.url  %>
         <%= image_tag article.image.url(:medium)  %>
     </p>
 <% end %>
 
     <div class="category_name">
-<% category_list.each do |category| %>
+<% for category in category_list %>
         <div class="category-item">
             <%= category.name %> <br>
-            <%= @category_list.size %>
+            <%= category.title %> <br>
+            <%= category.text %> <br>
+            <%=  image_tag category.image.url(:medium) %> <br>
         </div>
 <% end %>
     </div>
 
-
-<% if false %>
-    <% recent_article.each do |recent| %>
-            <p>
-                    <%= recent.title %>
-            </p>
-
-                <% end %>
-<% end %>

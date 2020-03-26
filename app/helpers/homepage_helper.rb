@@ -4,9 +4,6 @@ module HomepageHelper
     end
 
     def category_list
-        # @category_priority = Category.order('priority ASC').limit(4)
-        # @test = Article.select("title").where(category_id: @category_priority.ids)
-
         @category_list = Category.category_article
     end
 
