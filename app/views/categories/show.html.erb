@@ -6,13 +6,13 @@
                 <%= image_tag article.image.url(:medium) %> <br>
             </div>
             <div class="article-text">
-                <h5>
                     <% @category_name.each do |category| %>
-                        <%= category.name %>
+                        <h5><%= category.name %></h5>
                     <% end %>
-                </h5>
-                <%= article.title %> <br>
-                <%= article.text %> <br>
+                <h6><%= article.title %></h6>
+                <p><%= article.text %><p>
+
+                <%= link_to "Read More" %>
             </div>
         </div>
     <% end %>
