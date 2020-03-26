@@ -8,6 +8,7 @@ category_list = %w[American Caribbean Chinese French Italian Mexican]
 
 priop = (1..6).to_a.shuffle
 category_list.each do |n|
+    Category.create!(name: n, priority: priop[category_list.index(n)])
 end
 users = User.all
 img = (1..18).to_a.shuffle
