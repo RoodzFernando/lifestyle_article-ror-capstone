@@ -16,9 +16,8 @@ users.each do |user|
     Article.create(author_id: user.id, title: Faker::Lorem.sentence(word_count: 8), text: Faker::Lorem.paragraph(sentence_count: 4, supplemental: true), image: File.new("#{Rails.root}/app/assets/images/seed#{img[users.index(user)]}.jpg") ,category_id: rand(1..6))
 end
 
-users.each do |user|
-    Article.all.each do |article|
-        Vote.create!(user_id: user.id, article_id: article.id)
-    end
+
+Article.all.each do |article|
+    Vote.create!(user_id: article.author_id, article_id: article.id)
 end
 

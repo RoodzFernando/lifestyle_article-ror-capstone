@@ -59,6 +59,8 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
+    bootstrap-will_paginate (1.0.0)
+      will_paginate
     builder (3.2.4)
     byebug (11.1.1)
     climate_control (0.2.0)
@@ -176,6 +178,7 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
+    will_paginate (3.3.0)
     zeitwerk (2.3.0)
 
 PLATFORMS
@@ -183,6 +186,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
+  bootstrap-will_paginate (~> 1.0)
   byebug
   faker (~> 2.10, >= 2.10.2)
   jbuilder (~> 2.7)
@@ -196,6 +200,7 @@ DEPENDENCIES
   tzinfo-data
   web-console (>= 3.3.0)
   webpacker (~> 4.0)
+  will_paginate (~> 3.3)
 
 RUBY VERSION
    ruby 2.6.5p114
