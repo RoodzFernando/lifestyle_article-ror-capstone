@@ -12,7 +12,7 @@
                 <h6><%= article.title %></h6>
                 <p><%= article.text %><p>
 
-                <%= link_to "Read More" %>
+                <%= link_to "Read More",  article_path(article.id) %>
             </div>
         </div>
     <% end %>

@@ -55,7 +55,7 @@ $footer-color: #4E443E;
                 position: absolute;
                 top: 520px;
                 margin-left: 10px;
-                h2 {
+                h2 a {
                     color: $orange;
                     font-size: 22px;
                 }
@@ -92,8 +92,13 @@ $footer-color: #4E443E;
         }
         .category-name {
             position: absolute;
-            color: $white;
             padding-left: 10px;
+            h3 a {
+                color: $white;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
             h3:first-child {
                 border-bottom: 2px solid #EFED06;
                 padding-bottom: 1px;
@@ -103,8 +108,8 @@ $footer-color: #4E443E;
             position: absolute;
             top: 150px;
             padding-left: 5px;
-            color: $white;
-            h4 {
+            h4 a {
+                color: $white;
                 font-size: 22px;
             }
         }
