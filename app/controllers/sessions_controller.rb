@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
     if user
       log_in user
-      redirect_to user
+      redirect_to root_path
       flash[:success] = "Welcome #{user.name.titleize}!"
     else
       flash.now[:danger] = 'Name is invalid.'

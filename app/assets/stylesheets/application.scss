@@ -111,7 +111,7 @@ $footer-color: #4E443E;
     }
 }
 
-//
+// Category show
 .article-card {
     // border: 1px solid #000;
     display: grid;
@@ -157,6 +157,36 @@ $footer-color: #4E443E;
             color: $orange;
             margin-top: 25px;
         }
+    }
+}
+
+// Register Page
+.reg-title {
+    text-align: center;
+    // margin-top: 35px;
+}
+
+.register {
+    justify-content: center;
+    input[type="submit"] {
+        margin-top: 10px;
+        margin-bottom: 60%;
+        text-transform: uppercase;
+    }
+}
+
+// Forms
+.article-user {
+    text-align: center;
+}
+
+#form-article {
+    display: flex;
+    justify-content: center;
+    input[type='submit'] {
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-bottom: 25px;
     }
 }
 

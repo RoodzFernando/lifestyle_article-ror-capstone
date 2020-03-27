@@ -1,4 +1,6 @@
 <%= form_for @article, html: { multipart: true } do |form| %>
+<div class="row" id="form-article">
+  <div class="col-md-6 col-md-offset-3">
   <% if article.errors.any? %>
     <div id="error_explanation" class = "alert alert-danger">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -11,32 +13,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.file_field :image %>
-  </div>
+    <%= form.file_field :image, class: "btn btn-primary" %> <br>
 
-  <div class="field">
     <%= form.fields_for :categories do |f| %>
         <%= f.label :category %>
-        <select name="id">
+        <select name="id", class = "form-control">
           <% category_all.each do |category| %>
         <option value="<%= category.id %>"><%= category.name %></option>
     <% end %>
   </select>
     <% end %>
-  </div>
 
-  <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+    <%= form.text_field :title, class: 'form-control' %>
 
-  <div class="field">
     <%= form.label :text %>
-    <%= form.text_area :text %>
-  </div>
+    <%= form.text_area :text, class: 'form-control' %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <%= form.submit "Submit your article", class: "btn btn-primary form-control" %>
 <% end %>
+
+  </div>
+</div>
