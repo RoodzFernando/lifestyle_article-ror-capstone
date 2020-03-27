@@ -5,7 +5,7 @@ class Category < ApplicationRecord
     end
 
     scope :category_article, -> {
-        Article.find_by_sql("SELECT DISTINCT * FROM categories
+        Article.find_by_sql("SELECT DISTINCT *,MAX(articles.created_at) FROM categories
                     INNER JOIN articles on articles.category_id = categories.id
                     GROUP by categories.priority
                     ORDER by categories.priority ASC, MAX(articles.created_at) DESC LIMIT 4")}
