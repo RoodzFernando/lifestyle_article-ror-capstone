@@ -16,9 +16,14 @@
           </div>
         </div>
         <div class="article-controls">
+        <% if is_author? %>
           <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %>
           <%= link_to 'Back', root_path, class: 'btn btn-primary' %>
           <td><%= link_to 'Vote', vote_path, class: 'btn btn-primary' %></td>
+        <% else %>
+          <%= link_to 'Back', root_path, class: 'btn btn-primary' %>
+          <td><%= link_to 'Vote', vote_path, class: 'btn btn-primary' %></td>
+        <% end %>
         </div>
     </div>
 </div>

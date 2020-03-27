@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user
 
 
   def index
@@ -33,6 +34,9 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    # @category = Category.find_by(id: params[:id])
+    @article.category_id = @category.id
+
       if @article.update(article_params)
         redirect_to @article, notice: 'Article was successfully updated.'
       else
@@ -53,5 +57,12 @@ class ArticlesController < ApplicationController
 
     def article_params
       params.require(:article).permit(:title, :text, :image, :id, category_attributes: [:id])
+    end
+
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
     end
 end

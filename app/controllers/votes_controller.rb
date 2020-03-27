@@ -1,10 +1,17 @@
 class VotesController < ApplicationController
     def show
+        @votes = Vote.all
         @user = User.find_by(id: current_user)
         @article = Article.find(params[:id])
-        @vote = Vote.create(user_id: @user.id, article_id:  @article.id)
-        redirect_to articles_path
-        flash[:success] = 'You have voted.'
+        @vote = Vote.new(user_id: @user.id, article_id:  @article.id)
+        if current_user.votes.where(article_id: @article.id).count > 0
+            flash[:danger] = 'You can vote once for an article.'
+            redirect_to article_path(@article.id)
+        else
+            @vote.save
+            redirect_to article_path(@article.id)
+            flash[:success] = 'Thank you for your vote.'
+        end
     end
 
     private

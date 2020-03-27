@@ -1,7 +1,6 @@
 module ArticlesHelper
     def category_name(val)
         @article = Article.find(val)
-        # @category = Category.find(1)
         if @article.category_id.nil?
             "Undefined Category"
         else
@@ -16,5 +15,9 @@ module ArticlesHelper
     def category_view(val)
         @category = Category.find(val)
         @category.article_id = @article.id
+    end
+
+    def is_author?
+        current_user.id  == @article.author_id
     end
 end
