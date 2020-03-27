@@ -1,24 +1,25 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, 'Show') %>
+<div class="article-show">
+    <div class="article-image">
+        <%= image_tag @article.image.url() %>
+    </div>
 
+    <div class="article-content">
+        <div class="article-affiche">
+          <div class="article-element">
+            <h1><%= @article.title %></h1>
+            <p><%= @article.text %></p>
+          </div>
+          <div class="article-author">
+            <span>Author:</span>
+            <span><%= User.find(@article.author_id).name.titleize %></span>
+          </div>
+        </div>
+        <div class="article-controls">
+          <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %>
+          <%= link_to 'Back', articles_path, class: 'btn btn-primary' %>
+          <td><%= link_to 'Vote', vote_path, class: 'btn btn-primary' %></td>
+        </div>
+    </div>
+</div>
 
-<p>
-  <%= image_tag @article.image.url(:medium) %>
-</p>
-<p>
-  <strong>Author:</strong>
-  <%= @article.author_id %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %> |
-<td><%= link_to 'Vote', vote_path, data: { confirm: 'Are you sure?' } %></td>
