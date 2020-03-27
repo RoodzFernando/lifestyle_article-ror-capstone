@@ -1,7 +1,28 @@
 @import "bootstrap/scss/bootstrap";
-$orange: #FE6001;
+$orange: #FD6000;
 $white: #FFF;
 $yellow: #EFED06;
+$footer-color: #4E443E;
+// Header
+#nav {
+    // border: 1px solid #000;
+    display: flex;
+    justify-items: space-between;
+    padding: 22px 22px;
+    // flex-direction: column;
+    .navbar-brand {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .navbar-nav {
+        text-align: center;
+        text-transform: uppercase;
+        a {
+            color: #9D9996;
+        }
+    }
+}
+
 // Homepage
 .article-home {
     display: flex;
@@ -119,6 +140,44 @@ $yellow: #EFED06;
             display: block;
             color: $orange;
             margin-top: 25px;
+        }
+    }
+}
+
+// Footer
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 15px 22px 15px;
+    background: $footer-color;
+    .logo-footer {
+        a {
+            text-transform: uppercase;
+            color: $white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .text {
+        color: $white;
+    }
+    .agreement>a {
+        color: $orange;
+    }
+    .footer-links {
+        a {
+            color: $footer-color;
+        }
+        a>span {
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+            border: 1px solid $orange;
+            border-radius: 50%;
+            background: $orange;
         }
     }
 }

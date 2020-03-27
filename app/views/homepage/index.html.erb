@@ -8,7 +8,7 @@
                         <h2><%= article.title %></h2>
                         <p><%= article.text  %></p>
                     </div>
-                    <%= image_tag article.image.url(:medium)  %>
+                    <%= image_tag article.image.url()  %>
                 </div>
         <% end %>
             </div>
@@ -27,7 +27,7 @@
                     <div class="category-title">
                         <h4><%= category.title %><h4>
                     </div>
-                    <%=  image_tag category.image.url(:medium) %>
+                    <%=  image_tag category.image.url() %>
                 </div>
         <% end %>
     </div>

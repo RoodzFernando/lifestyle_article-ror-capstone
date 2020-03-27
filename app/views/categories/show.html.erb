@@ -1,9 +1,10 @@
+<% provide(:title, "Category") %>
 
 <div class="article-card">
     <% for article in @articles_filtered %>
         <div class="article-content">
             <div class="article-img">
-                <%= image_tag article.image.url(:medium) %> <br>
+                <%= image_tag article.image.url() %> <br>
             </div>
             <div class="article-text">
                     <% @category_name.each do |category| %>

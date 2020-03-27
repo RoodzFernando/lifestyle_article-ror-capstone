@@ -1,5 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="<%= root_path %>">Recipe Book</a>
+<nav id = "nav" class="navbar navbar-expand-lg navbar-light bg-light">
+    <div>
+        <a class="navbar-brand" href="<%= root_path %>">Recipe Book</a>
+    </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -31,6 +33,9 @@
                 <a class="nav-link" href="<%= category_path(6) %>">Mexican <span class="sr-only">(current)</span></a>
             </li>
         </ul>
+    </div>
+
+    <div class="nav-btn">
         <%if logged_in?%>
             <%= link_to "Write an article", new_article_path %>
             <%= link_to "Logout", logout_path, method: :delete %>
