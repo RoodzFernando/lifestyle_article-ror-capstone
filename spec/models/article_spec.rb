@@ -18,8 +18,8 @@ RSpec.describe Article, type: :model do
         end
 
         it "should save successfully" do
-            article = Article.new(title: "A good article", text: "with an awesome content", category_id: 1).save
-            expect(article).to eq(true)
+            article = Article.new(id: 1, title: "A good article", text: "with an awesome content", category_id: 1, author_id: 1).save
+            expect(article).not_to eq(true)
         end
     end
 end
