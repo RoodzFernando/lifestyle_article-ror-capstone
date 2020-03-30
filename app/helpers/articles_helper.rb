@@ -18,7 +18,7 @@ module ArticlesHelper
     @category.article_id = @article.id
   end
 
-  def is_author?
+  def author?
     current_user.id == @article.author_id
   end
 end
