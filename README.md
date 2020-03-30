@@ -20,7 +20,7 @@ in this project, I build a book of recipe app that allows users to share their e
 This project can be found in (https://github.com/RoodzFernando/lifestyle-ror-capstone)
 
 
-### ✨ [live version](https://http://roodzfernando-ror-lifestyle.herokuapp.com//)
+### ✨ [live version](https://roodzfernando-ror-lifestyle.herokuapp.com/)
 
 ## 🔨 instructions
 
