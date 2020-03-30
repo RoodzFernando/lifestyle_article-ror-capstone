@@ -22,6 +22,13 @@ This project can be found in (https://github.com/RoodzFernando/lifestyle-ror-cap
 
 ### ✨ [live version](https://roodzfernando-ror-lifestyle.herokuapp.com/)
 
+<a href="https://roodzfernando-ror-lifestyle.herokuapp.com/" target="_blank">
+    <img alt="app image" src="https://github.com/RoodzFernando/lifestyle_article-ror-capstone/app/assets/images/shots/img1.png"/>
+</a>
+<a href="https://roodzfernando-ror-lifestyle.herokuapp.com/" target="_blank">
+    <img alt="app image" src="https://github.com/RoodzFernando/lifestyle_article-ror-capstone/app/assets/images/shots/img2.png"/>
+</a>
+
 ## 🔨 instructions
 
 To get started with the app, clone the repo and then install the needed gems:
