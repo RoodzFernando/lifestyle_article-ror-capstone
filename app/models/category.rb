@@ -5,6 +5,9 @@ class Category < ApplicationRecord
   end
 
   scope :category_article, -> {
-      Article.unscoped.select('categories.* ,articles.*').joins('INNER JOIN categories ON categories.id = articles.category_id').order('categories.priority').group('categories.id, articles.id').limit(4)
-    }
+      # Article.select('categories.* ,articles.*').joins('INNER JOIN categories ON categories.id = articles.category_id').where('categories.name').distinct.group('categories.id').order('priority').limit(4)
+
+    Article.find_by_sql("SELECT DISTINCT articles.category_id, articles.image_file_name, articles.title,categories.name, categories.id  FROM articles INNER JOIN categories ON articles.category_id = categories.id
+    GROUP BY categories.priority ORDER BY categories.priority LIMIT 4 ")
+  }
     end
