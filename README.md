@@ -19,15 +19,14 @@ in this project, I build a book of recipe app that allows users to share their e
 
 This project can be found in (https://github.com/RoodzFernando/lifestyle-ror-capstone)
 
+ 
+  
 
 ### ✨ [live version](https://roodzfernando-ror-lifestyle.herokuapp.com/)
 
-<a href="https://roodzfernando-ror-lifestyle.herokuapp.com/" target="_blank">
-    <img alt="app image" src="https://github.com/RoodzFernando/lifestyle_article-ror-capstone/app/assets/images/shots/img1.png"/>
-</a>
-<a href="https://roodzfernando-ror-lifestyle.herokuapp.com/" target="_blank">
-    <img alt="app image" src="https://github.com/RoodzFernando/lifestyle_article-ror-capstone/app/assets/images/shots/img2.png"/>
-</a>
+###   ![](app/assets/images/shots/img1.PNG)
+###   ![](app/assets/images/shots/img2.PNG)
+
 
 ## 🔨 instructions
 
