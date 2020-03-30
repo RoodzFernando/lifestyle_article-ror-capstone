@@ -19,6 +19,9 @@ in this project, I build a book of recipe app that allows users to share their e
 
 This project can be found in (https://github.com/RoodzFernando/lifestyle-ror-capstone)
 
+
+### ✨ [live version](https://http://roodzfernando-ror-lifestyle.herokuapp.com//)
+
 ## 🔨 instructions
 
 To get started with the app, clone the repo and then install the needed gems:
@@ -36,7 +39,7 @@ $ rails db:migrate
 Finally, run the test suite to verify that everything is working correctly:
 
 ```
-$ rails test
+$ rails rake or rspec
 ```
 
 If the test suite passes, you'll be ready to run the app in a local server:
@@ -49,9 +52,9 @@ $ rails server
 
 ## 🤝 contributing
 
-contributions, issues, and feature requests are welcome!<br/>feel free to check [issues page](hhttps://github.com/firmoholanda/stay-in-touch/development/issues).
+contributions, issues, and feature requests are welcome!<br/>feel free to check [issues page](hhttps://github.com/roodzfernando/lifestyle_article-ror-capstone/development/issues).
 
-1. fork it (https://github.com/firmoholanda/stay-in-touch/development/fork)
+1. fork it (https://github.com/roodzfernando/lifestyle_article-ror-capstone/development/fork)
 2. create your working branch (git checkout -b [choose-a-name])
 3. commit your changes (git commit -am 'what this commit will fix/add/improve')
 4. push to the branch (git push origin [chosen-name])
@@ -67,5 +70,5 @@ give a ⭐️ if you like this project!
 
 ## 📝 license
 
-this project is [MIT](https://github.com/firmoholanda/stay-in-touch/development/license.txt) licensed.
+this project is [MIT](https://github.com/roodzfernando/lifestyle_article-ror-capstone/development/license.txt) licensed.
 
