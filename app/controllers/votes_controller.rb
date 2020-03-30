@@ -4,7 +4,7 @@ class VotesController < ApplicationController
     @user = User.find_by(id: current_user)
     @article = Article.find(params[:id])
     @vote = Vote.new(user_id: @user.id, article_id: @article.id)
-    if current_user.votes.where(article_id: @article.id).count > 0
+    if current_user.votes.where(article_id: @article.id).count.positive?
       flash[:danger] = 'You can vote once for that article.'
       redirect_to article_path(@article.id)
     else
