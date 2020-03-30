@@ -5,6 +5,6 @@ class Category < ApplicationRecord
   end
 
   scope :category_article, -> {
-                             Article.unscoped.select('categories.* ,articles.*').joins('INNER JOIN categories ON categories.id = articles.category_id').order('categories.priority').group('categories.id').limit(4)
-                           }
+      Article.unscoped.select('categories.* ,articles.*').joins('INNER JOIN categories ON categories.id = articles.category_id').order('categories.priority, articles.id').group('categories.id').limit(4)
+    }
     end
