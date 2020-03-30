@@ -5,5 +5,5 @@ class Category < ApplicationRecord
     end
 
     scope :category_article, -> {
-        Article.select("articles.*, categories.*").joins('INNER JOIN categories ON categories.id = articles.category_id').order('categories.priority').group('categories.id').limit(4)}
+        Article.select("categories.* ,articles.*").joins('INNER JOIN categories ON categories.id = articles.category_id').order('categories.priority').group('categories.id').limit(4)}
     end
