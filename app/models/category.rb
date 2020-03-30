@@ -4,7 +4,7 @@ class Category < ApplicationRecord
     Category.order('priority ASC').limit(4)
   end
 
-  scope :category_article, lambda {
-                             Article.select('categories.* ,articles.*').joins('INNER JOIN categories ON categories.id = articles.category_id').order('categories.priority').group('categories.id').limit(4)
+  scope :category_article, -> {
+                             Article.unscoped.select('categories.* ,articles.*').joins('INNER JOIN categories ON categories.id = articles.category_id').order('categories.priority').group('categories.id').limit(4)
                            }
     end

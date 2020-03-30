@@ -20,8 +20,8 @@
         <select name="id", class = "form-control">
           <% category_all.each do |category| %>
         <option value="<%= category.id %>"><%= category.name %></option>
-    <% end %>
-  </select>
+      <% end %>
+      </select>
     <% end %>
 
     <%= form.label :title %>
@@ -30,7 +30,7 @@
     <%= form.label :text %>
     <%= form.text_area :text, class: 'form-control' %>
 
-    <%= form.submit "Submit your article", class: "btn btn-primary form-control" %>
+    <%= form.submit yield(:text), class: "btn btn-primary form-control" %>
 <% end %>
 
   </div>
