@@ -15,6 +15,8 @@
 
         <div class="user-info">
             <h3><%= current_user.name.titleize if logged_in? %></h3>
+            <h4>has <%= pluralize(current_user.articles.count, 'Article') %></h4>
+            <h4>Member since: <%= time_ago_in_words(current_user.created_at) %></h4>
         </div>
     </div>
 

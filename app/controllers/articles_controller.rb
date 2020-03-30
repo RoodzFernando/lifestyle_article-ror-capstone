@@ -34,11 +34,9 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    # @category = Category.find_by(id: params[:id])
-    @article.category_id = @category.id
-
       if @article.update(article_params)
-        redirect_to @article, notice: 'Article was successfully updated.'
+        redirect_to @article
+        flash[:success] = 'Article was successfully updated.'
       else
         render :edit
       end
@@ -57,12 +55,5 @@ class ArticlesController < ApplicationController
 
     def article_params
       params.require(:article).permit(:title, :text, :image, :id, category_attributes: [:id])
-    end
-
-    def logged_in_user
-      unless logged_in?
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
     end
 end
