@@ -33,6 +33,12 @@ Next, migrate the database:
 $ rails db:migrate
 ```
 
+Next, seed the database:
+
+```
+$ rails db:seed
+```
+
 Finally, run the test suite to verify that everything is working correctly:
 
 ```
