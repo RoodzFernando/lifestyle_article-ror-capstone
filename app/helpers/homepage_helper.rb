@@ -4,7 +4,7 @@ module HomepageHelper
   end
 
   def category_list
-    @category_list = Category.category_article
+    @category_list = Article.category_article
   end
 
   def recent_article
