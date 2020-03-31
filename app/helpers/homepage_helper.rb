@@ -4,7 +4,11 @@ module HomepageHelper
   end
 
   def category_list
-    @category_list = Article.category_article
+    @category_list = Category.all.order(:priority).limit(4).map {|category| category.articles.last}
+  end
+
+  def get_category(article)
+    Category.find(article.category_id).name
   end
 
   def recent_article

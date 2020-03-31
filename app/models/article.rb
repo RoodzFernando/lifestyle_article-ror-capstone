@@ -11,9 +11,11 @@ class Article < ApplicationRecord
 
   scope :most_voted, -> { Article.left_joins(:votes).group(:id).order('COUNT(votes.article_id) DESC').limit(1) }
 
-   scope :category_article, lambda {
-                             Article.left_outer_joins(:category).distinct.select('categories.*, articles.*').group('categories.id').order('priority ,articles.created_at DESC').limit(4)
-                           }
+  #  scope :category_article, lambda {
+  #                            Article.left_outer_joins(:category).distinct.select('categories.*, articles.*').group('categories.id').order('priority ,articles.created_at DESC').limit(4)
+  #                          }
+
+  scope :category_article, -> {Category.find_by(priority: 1).articles.last}
 
   validates :title, presence: true, length: { maximum: 150 }
   validates :text, presence: true

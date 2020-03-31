@@ -24,7 +24,7 @@
         <% for category in category_list %>
                 <div class="category-item">
                     <div class="category-name">
-                        <h3><%= link_to category.name, category_path(category.category_id) %><h3>
+                        <h3><%= link_to get_category(category), category_path(category.category_id) %><h3>
                     </div>
                     <div class="category-title">
                         <h4><%= link_to category.title, article_path(category.id) %><h4>
