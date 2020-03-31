@@ -15,7 +15,7 @@ class Article < ApplicationRecord
   #                            Article.left_outer_joins(:category).distinct.select('categories.*, articles.*').group('categories.id').order('priority ,articles.created_at DESC').limit(4)
   #                          }
 
-  scope :category_article, -> {Category.find_by(priority: 1).articles.last}
+  scope :category_article, -> { Category.find_by(priority: 1).articles.last }
 
   validates :title, presence: true, length: { maximum: 150 }
   validates :text, presence: true
