@@ -19,8 +19,8 @@ in this project, I build a book of recipe app that allows users to share their e
 
 This project can be found in (https://github.com/RoodzFernando/lifestyle-ror-capstone)
 
- 
-  
+
+
 
 ### ✨ [live version](https://nameless-reef-08582.herokuapp.com/)
 
@@ -40,6 +40,12 @@ Next, migrate the database:
 
 ```
 $ rails db:migrate
+```
+
+Next, seed the database:
+
+```
+$ rails db:seed
 ```
 
 Finally, run the test suite to verify that everything is working correctly:
