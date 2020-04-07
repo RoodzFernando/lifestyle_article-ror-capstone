@@ -1,0 +1,115 @@
+//= require_tree
+@import './variables';
+@import "bootstrap/scss/bootstrap";
+.article-home {
+    display: flex;
+    .article-home-card {
+        width: 75%;
+        .article-img {
+            background: grey;
+            height: 550px;
+            img {
+                width: 100%;
+                height: 550px;
+                border-top: 5px solid $footer-color;
+            }
+            .article-text {
+                position: absolute;
+                top: 520px;
+                margin-left: 10px;
+                h2 a {
+                    color: $orange;
+                    font-size: 22px;
+                }
+                p {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .user-info {
+        width: 25%;
+        padding-top: 25px;
+        padding-left: 10px;
+        background: grey;
+        color: $white;
+        p {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+}
+
+.category_name {
+    display: flex;
+    background: lightgreen;
+    .category-item {
+        width: calc(100%/4);
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 250px;
+        }
+        .category-name {
+            position: absolute;
+            padding-left: 10px;
+            h3 a {
+                color: $white;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            h3:first-child {
+                border-bottom: 2px solid #EFED06;
+                padding-bottom: 1px;
+            }
+        }
+        .category-title {
+            position: absolute;
+            top: 150px;
+            padding-left: 5px;
+            h4 a {
+                color: $white;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 15px 22px 15px;
+    background: $footer-color;
+    .logo-footer {
+        a {
+            text-transform: uppercase;
+            color: $white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .text {
+        color: $white;
+    }
+    .agreement>a {
+        color: $orange;
+    }
+    .footer-links {
+        a {
+            color: $footer-color;
+        }
+        a>span {
+            padding: 5px;
+            border: 1px solid $orange;
+            border-radius: 50%;
+            background: $orange;
+        }
+    }
+}

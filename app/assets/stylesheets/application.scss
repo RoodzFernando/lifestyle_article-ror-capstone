@@ -1,9 +1,6 @@
+//= require_tree
+@import './variables';
 @import "bootstrap/scss/bootstrap";
-$orange: #FD6000;
-$white: #FFF;
-$yellow: #EFED06;
-$footer-color: #4E443E;
-// Header
 #nav {
     padding: 22px 22px;
     .navbar-brand {
@@ -38,141 +35,6 @@ $footer-color: #4E443E;
     }
 }
 
-// Homepage
-.article-home {
-    display: flex;
-    .article-home-card {
-        width: 75%;
-        .article-img {
-            background: grey;
-            height: 550px;
-            img {
-                width: 100%;
-                height: 550px;
-                border-top: 5px solid $footer-color;
-            }
-            .article-text {
-                position: absolute;
-                top: 520px;
-                margin-left: 10px;
-                h2 a {
-                    color: $orange;
-                    font-size: 22px;
-                }
-                p {
-                    color: $white;
-                }
-            }
-        }
-    }
-    .user-info {
-        width: 25%;
-        padding-top: 25px;
-        padding-left: 10px;
-        background: grey;
-        color: $white;
-        p {
-            text-align: center;
-            font-weight: bold;
-            font-size: 18px;
-        }
-    }
-}
-
-.category_name {
-    display: flex;
-    background: lightgreen;
-    .category-item {
-        width: calc(100%/4);
-        height: 250px;
-        position: relative;
-        overflow: hidden;
-        img {
-            width: 100%;
-            height: 250px;
-        }
-        .category-name {
-            position: absolute;
-            padding-left: 10px;
-            h3 a {
-                color: $white;
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-            h3:first-child {
-                border-bottom: 2px solid #EFED06;
-                padding-bottom: 1px;
-            }
-        }
-        .category-title {
-            position: absolute;
-            top: 150px;
-            padding-left: 5px;
-            h4 a {
-                color: $white;
-                font-size: 22px;
-            }
-        }
-    }
-}
-
-// Category show
-.article-card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    .article-img {
-        width: 50%;
-        height: 320px;
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
-    .article-content {
-        display: flex;
-    }
-    .article-text {
-        width: 50%;
-        word-wrap: break-word;
-        padding-left: 3%;
-        background-color: rgb(255, 255, 255);
-        h5 {
-            color: $orange;
-            text-decoration: underline;
-            text-decoration-color: $orange;
-            text-decoration-thickness: 2px;
-        }
-        h6 {
-            color: #000;
-            font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        a {
-            display: block;
-            color: $orange;
-            margin-top: 25px;
-        }
-    }
-}
-
-.article-content:nth-child(3) {
-    display: flex;
-    .article-text {
-        order: -1;
-    }
-}
-
-.article-content:last-child {
-    display: flex;
-    .article-text {
-        order: -1;
-    }
-}
-
-// Register Page
 .reg-title {
     text-align: center;
 }
@@ -186,104 +48,6 @@ $footer-color: #4E443E;
     }
 }
 
-// Forms
-.article-user {
-    text-align: center;
-}
-
-#form-article {
-    display: flex;
-    justify-content: center;
-    input[type='submit'] {
-        text-transform: uppercase;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-}
-
-// Article show
-.article-show {
-    display: flex;
-    .article-image {
-        width: 50%;
-        height: 550px;
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
-    .article-content {
-        border-bottom: 2px solid $orange;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background: $footer-color;
-        .article-affiche {
-            h1 {
-                color: $orange;
-                font-size: 23px;
-                text-align: center;
-                margin: 1.2rem 0 1.5rem 0;
-            }
-            p {
-                color: $white;
-                margin-left: 1.2rem;
-                font-size: 1.1em;
-            }
-        }
-        .article-author {
-            color: $white;
-            text-align: right;
-            margin-right: 35px;
-            span:last-child {
-                color: $orange;
-            }
-        }
-        .article-controls {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-    }
-}
-
-// Footer
-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 22px 15px 22px 15px;
-    background: $footer-color;
-    .logo-footer {
-        a {
-            text-transform: uppercase;
-            color: $white;
-            font-size: 1.25rem;
-            font-weight: bold;
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
-    .text {
-        color: $white;
-    }
-    .agreement>a {
-        color: $orange;
-    }
-    .footer-links {
-        a {
-            color: $footer-color;
-        }
-        a>span {
-            padding: 5px;
-            border: 1px solid $orange;
-            border-radius: 50%;
-            background: $orange;
-        }
-    }
-}
-
-//
 .pagination {
     height: 36px;
     margin: 0;
@@ -432,11 +196,8 @@ footer {
     background: red;
     box-sizing: border-box;
     color: #fff;
-    // border: 1px solid #000;
 }
 
 .pagination li:first-child {
     border-left-width: 1px;
 }
-
-//
