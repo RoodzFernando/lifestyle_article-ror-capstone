@@ -79,10 +79,12 @@
     }
 }
 
+
+
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 22px 15px 22px 15px;
+    padding: 22px 15px 2px 15px;
     background: $footer-color;
     .logo-footer {
         a {
@@ -98,6 +100,11 @@ footer {
     .text {
         color: $white;
     }
+    .text-connect {
+        position: relative;
+        color: $white;
+        top: -12px;
+    }
     .agreement>a {
         color: $orange;
     }
@@ -105,11 +112,31 @@ footer {
         a {
             color: $footer-color;
         }
-        a>span {
-            padding: 5px;
+        .social-link {
+            display: inline-block;
             border: 1px solid $orange;
+            height: 40px;
+            width: 40px;
             border-radius: 50%;
             background: $orange;
+        }
+        #twitter {
+            background-image: url("./icons/twitter.svg");
+            background-size: 22px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #linkedin {
+            background-image: url("./icons/linkedin.svg");
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #facebook {
+            background-image: url("./icons/facebook.svg");
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 }
