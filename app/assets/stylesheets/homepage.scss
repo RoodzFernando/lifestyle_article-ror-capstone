@@ -87,6 +87,10 @@ footer {
     padding: 22px 15px 2px 15px;
     background: $footer-color;
     .logo-footer {
+        img {
+            height: 35px;
+            width: 50%;
+        }
         a {
             text-transform: uppercase;
             color: $white;
