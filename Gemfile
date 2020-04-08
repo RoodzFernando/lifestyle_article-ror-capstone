@@ -41,6 +41,9 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4'
   gem 'rspec-rails', '~> 4.0'
+  gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+  gem 'figaro', '~> 1.1', '>= 1.1.1'
+
 end
 
 group :development do
