@@ -1,10 +1,12 @@
 //= require_tree
 @import './variables';
 @import "bootstrap/scss/bootstrap";
+
+/*
 #nav {
     padding: 22px 22px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     .navbar-brand {
         display: block;
         text-transform: uppercase;
@@ -42,6 +44,54 @@
         font-weight: bold;
         a {
             color: #9D9996;
+        }
+    }
+    .nav-btn {
+        text-transform: uppercase;
+        a {
+            color: grey;
+        }
+        a:first-child::after {
+            content: "|";
+            padding-left: 5px;
+        }
+    }
+}
+*/
+
+#nav {
+    padding: 22px 22px;
+    display: flex;
+    justify-content: space-between;
+    .brand-logo {
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+        img {
+            height: 35px;
+            width: 50%;
+        }
+    }
+    .nav-links {
+        position: absolute;
+        left: 25%;
+        .nav-item-links {
+            display: flex;
+            justify-content: flex-start;
+            li {
+                list-style: none;
+                a {
+                    color: #9D9996;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    // font-weight: bold;
+                }
+            }
+            .active {
+                a {
+                    color: $orange;
+                }
+            }
         }
     }
     .nav-btn {

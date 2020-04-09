@@ -1,10 +1,10 @@
 <nav id = "nav">
     <div>
-        <a class="navbar-brand" href="<%= root_path %>"><%= image_tag "logo.png" %></a>
+        <a class="brand-logo" href="<%= root_path %>"><%= image_tag "logo.png" %></a>
     </div>
 
     <div class="nav-links">
-        <ul>
+        <ul class="nav-item-links" >
             <li class="nav-item <%= active_class(root_path) %>">
                 <a class="nav-link" href="<%= root_path %>">Home <span class="sr-only">(current)</span></a>
             </li>
