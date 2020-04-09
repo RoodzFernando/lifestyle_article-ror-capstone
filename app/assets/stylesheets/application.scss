@@ -3,6 +3,8 @@
 @import "bootstrap/scss/bootstrap";
 #nav {
     padding: 22px 22px;
+    display: flex;
+    justify-content: space-evenly;
     .navbar-brand {
         display: block;
         text-transform: uppercase;
@@ -12,21 +14,34 @@
             width: 50%;
         }
     }
+    .nav-links {
+        ul {
+            display: flex;
+            padding-left: 0;
+            li {
+                list-style: none;
+                a {
+                    color: #9D9996;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+        }
+        .active {
+            a {
+                color: $orange;
+            }
+        }
+    }
     .navbar-nav {
         display: flex;
         justify-content: center;
         text-align: center;
-        // padding-left: 30%;
+        border: 1px solid red;
         text-transform: uppercase;
         font-weight: bold;
-        
         a {
             color: #9D9996;
-        }
-        .nav-item .active {
-            a {
-                color: $orange;
-            }
         }
     }
     .nav-btn {
@@ -40,8 +55,6 @@
         }
     }
 }
-
-
 
 .reg-title {
     text-align: center;

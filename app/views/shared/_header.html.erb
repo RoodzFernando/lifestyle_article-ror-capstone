@@ -1,35 +1,35 @@
-<nav id = "nav" class="navbar navbar-expand-lg navbar-light bg-light">
+<nav id = "nav">
     <div>
         <a class="navbar-brand" href="<%= root_path %>"><%= image_tag "logo.png" %></a>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+    <div class="nav-links">
+        <ul>
+            <li class="nav-item <%= active_class(root_path) %>">
                 <a class="nav-link" href="<%= root_path %>">Home <span class="sr-only">(current)</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item <%= active_class(category_path(1)) %>">
                 <a class="nav-link" href="<%= category_path(1) %>">American <span class="sr-only">(current)</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item <%= active_class(category_path(2)) %>">
                 <a class="nav-link" href="<%= category_path(2) %>">Caribbean <span class="sr-only">(current)</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item <%= active_class(category_path(3)) %>">
                 <a class="nav-link" href="<%= category_path(3) %>">Chinese <span class="sr-only">(current)</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item <%= active_class(category_path(4)) %>">
                 <a class="nav-link" href="<%= category_path(4) %>">French <span class="sr-only">(current)</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item <%= active_class(category_path(5)) %>">
                 <a class="nav-link" href="<%= category_path(5) %>">Italian <span class="sr-only">(current)</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item <%= active_class(category_path(6)) %>">
                 <a class="nav-link" href="<%= category_path(6) %>">Mexican <span class="sr-only">(current)</span></a>
             </li>
         </ul>
