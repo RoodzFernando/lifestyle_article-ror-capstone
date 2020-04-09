@@ -1,5 +1,5 @@
-AllCops:
   # NewCops: disable
+AllCops:
   Exclude:
     - "db/**/*"
     - "bin/*"
@@ -40,7 +40,8 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
-Style/HashEachMethod:
+
+Style/HashEachMethods:
   Enabled: false
 Style/HashTransformKeys:
   Enabled: false
