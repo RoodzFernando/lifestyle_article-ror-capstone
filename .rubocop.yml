@@ -1,4 +1,5 @@
 AllCops:
+  # NewCops: disable
   Exclude:
     - "db/**/*"
     - "bin/*"
@@ -7,7 +8,6 @@ AllCops:
     - "Rakefile"
     - "README.md"
     - "node_modules/**/*"
-
   DisplayCopNames: true
 
 Layout/LineLength:
@@ -40,6 +40,12 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Style/HashEachMethod:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Style/HashTransformValues:
+  Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
@@ -48,3 +54,4 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
+
