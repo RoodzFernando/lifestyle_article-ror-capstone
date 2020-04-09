@@ -41,11 +41,10 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4'
   gem 'rspec-rails', '~> 4.0'
-  gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
   # gem 'aws-sdk-s3', '~> 1.61', '>= 1.61.2'
   gem 'figaro', '~> 1.1', '>= 1.1.1'
-
 end
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 group :development do
   gem 'sqlite3', '~> 1.4'
