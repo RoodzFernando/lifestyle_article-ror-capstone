@@ -4,6 +4,7 @@
     <div class="col-md-offset-3 col-md-6">
         <%= form_for(:session, url: login_path) do |f| %>
             <%= f.text_field :name, class: 'form-control', placeholder: 'Username' %>
+            <span>New user?</span> <%= link_to "Register Here", new_user_path %>
             <%= f.submit "Login", class: "form-control btn btn-primary" %>
         <% end %>
     </div>
