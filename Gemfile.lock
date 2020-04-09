@@ -1119,6 +1119,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk (~> 3.0, >= 3.0.1)
+  aws-sdk-s3 (~> 1.61, >= 1.61.2)
   bootsnap (>= 1.4.2)
   bootstrap-will_paginate (~> 1.0)
   byebug
