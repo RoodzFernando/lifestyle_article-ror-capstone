@@ -12,6 +12,7 @@
                 width: 100%;
                 height: 550px;
                 border-top: 5px solid $footer-color;
+                object-fit: cover;
             }
             .article-text {
                 position: absolute;
@@ -52,6 +53,8 @@
         img {
             width: 100%;
             height: 250px;
+            object-fit: cover;
+
         }
         .category-name {
             position: absolute;
@@ -78,8 +81,6 @@
         }
     }
 }
-
-
 
 footer {
     display: flex;
@@ -124,7 +125,6 @@ footer {
             border-radius: 50%;
             background: $orange;
         }
-
         #twitter {
             background-image: url(<%= asset_path("icons/twitter.svg") %>);
             background-size: 22px;
