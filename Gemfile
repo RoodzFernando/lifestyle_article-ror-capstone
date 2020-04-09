@@ -45,7 +45,7 @@ group :development, :test do
   gem 'figaro', '~> 1.1', '>= 1.1.1'
 end
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
-
+gem 'rubocop-rails', require: false
 group :development do
   gem 'sqlite3', '~> 1.4'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.

@@ -1,4 +1,4 @@
-  # NewCops: disable
+require: rubocop-rails
 AllCops:
   Exclude:
     - "db/**/*"
@@ -48,6 +48,11 @@ Style/HashTransformKeys:
 Style/HashTransformValues:
   Enabled: false
 
+Lint/RaiseException:
+  Enabled: false
+Lint/StructNewOverride:
+  Enabled: false
+
 Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
@@ -55,4 +60,5 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
+
 
