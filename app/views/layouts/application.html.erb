@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-  <body>
-    <div class="container-fluid">
-      <%= render 'shared/header' %>
-      <% flash.each do |message_type, message| %>
-          <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
-        <%= yield %>
-      <%= render 'shared/footer' %>
-    </div>
-  </body>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <%= render 'shared/header1' %>
+    <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+  </div>
+    <script>
+
+    $(document).on("click","#btn-search", function(e){
+  $(".search").show();
+  e.preventDefault();
+});
+});
+    </script>
+</body>
+
 </html>

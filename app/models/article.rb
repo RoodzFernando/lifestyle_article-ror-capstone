@@ -16,7 +16,13 @@ class Article < ApplicationRecord
   #                          }
 
   scope :category_article, -> { Category.find_by(priority: 1).articles.last }
-
+  def self.search(search)
+    if search
+      where('title like ?', "%#{search}%")
+    else
+      find(:all)
+    end
+  end
   validates :title, presence: true, length: { maximum: 150 }
   validates :text, presence: true
 end

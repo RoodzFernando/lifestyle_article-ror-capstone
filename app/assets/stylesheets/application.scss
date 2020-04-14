@@ -69,7 +69,7 @@
         font-weight: bold;
         img {
             height: 35px;
-            width: 50%;
+            width: 100%;
         }
     }
     .nav-links {
@@ -87,11 +87,11 @@
                     // font-weight: bold;
                 }
             }
-            .active {
-                a {
-                    color: $orange;
-                }
-            }
+        }
+    }
+    .active {
+        a {
+            color: $orange;
         }
     }
     .nav-btn {
