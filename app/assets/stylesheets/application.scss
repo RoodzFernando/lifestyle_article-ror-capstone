@@ -16,6 +16,8 @@
         }
         .nav-btn {
             text-transform: uppercase;
+            position: relative;
+            top: 8px;
             a {
                 color: grey;
             }
@@ -170,5 +172,16 @@
         }
         .pagination li:first-child {
             border-left-width: 1px;
+        }
+    }
+    
+    @media (min-width: 1190px) {
+        #nav {
+            input[type="text"] {
+                width: 95px;
+            }
+            .nav-btn {
+                font-size: 0.8em;
+            }
         }
     }
