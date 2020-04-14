@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :logged_in_user
 
   def index
-    @articles = Article.all
+    @articles = Article.search(params[:search])
   end
 
   def show; end

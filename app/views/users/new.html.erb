@@ -1,11 +1,11 @@
-<% provide(:title, 'Register') %>
-        <h1 class="reg-title" >Register</h1>
-<div class="row register">
-    <div class="col-md-offset-3 col-md-6">
-        <%= form_for(:user, url: users_path) do |f| %>
-            <%= render 'shared/errors' %>
-            <%= f.text_field :name, class: 'form-control', placeholder: 'Username' %>
-            <%= f.submit "Create your account", class: "form-control btn btn-primary" %>
-        <% end %>
-    </div>
-</div>
+        <div class="row register">
+        <% provide(:title, 'Register') %>
+        <h1 class="reg-title" style="text-align:center;">Register</h1>
+            <div class="offset-md-3 col-md-6">
+                <%= form_for(:user, url: users_path) do |f| %>
+                <%= render 'shared/errors' %>
+                <%= f.text_field :name, class: 'form-control', placeholder: 'Username' %><br>
+                <%= f.submit "Create your account", class: "form-control btn btn-primary" %>
+                <% end %>
+            </div>
+        </div>
