@@ -1,0 +1,24 @@
+<% provide(:title, "Category") %>
+<div class="article-card">
+    <% for article in @articles_filtered %>
+        <div class="article-content">
+            <div class="article-img">
+                <%= image_tag article.image.url() %> <br>
+            </div>
+            <div class="article-text">
+                    <% @category_name.each do |category| %>
+                        <h5><%= category.name %></h5>
+                    <% end %>
+                <h6><%= article.title %></h6>
+                <p><%= article.text %><p>
+
+                <%= link_to "Read More",  article_path(article.id) %>
+            </div>
+        </div>
+    <% end %>
+</div>
+    <%= will_paginate @articles_filtered %>
+
+
+
+

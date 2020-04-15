@@ -1,0 +1,7 @@
+<% provide(:title, "New Article") %>
+<% provide(:text, "submit your Article") %>
+<h1 class="article-user">New Article</h1>
+
+<%= render 'form', article: @article %>
+
+<%= link_to 'Back', articles_path %>

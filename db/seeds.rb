@@ -1,7 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.create!(name: 'default user')
+15.times do |_n|
+  User.all.create!(name: Faker::Name.unique.name)
+end
+
+category_list = %w[American Caribbean Chinese French Italian Mexican]
+
+priop = (1..6).to_a.shuffle
+category_list.each do |n|
+  Category.create!(name: n, priority: priop[category_list.index(n)])
+end
+users = User.all
+img = (1..18).to_a.shuffle
+users.each do |user|
+  Article.create(author_id: user.id, title: Faker::Lorem.sentence(word_count: 8), text: Faker::Lorem.paragraph(sentence_count: 4, supplemental: true), image: File.new("#{Rails.root}/app/assets/images/seed#{img[users.index(user)]}.jpg"), category_id: rand(1..6))
+end
+
+Article.all.each do |article|
+  Vote.create!(user_id: article.author_id, article_id: article.id)
+end

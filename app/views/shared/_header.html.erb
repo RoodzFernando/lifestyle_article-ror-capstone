@@ -1,0 +1,47 @@
+<nav id = "nav" class="col-lg-12">
+    <div>
+        <a class="brand-logo" href="<%= root_path %>"><%= image_tag "logo.png" %></a>
+    </div>
+
+    <div class="nav-links">
+        <ul class="nav-item-links" >
+            <li class="nav-item <%= active_class(root_path) %>">
+                <a class="nav-link" href="<%= root_path %>">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item <%= active_class(category_path(1)) %>">
+                <a class="nav-link" href="<%= category_path(1) %>">American <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item <%= active_class(category_path(2)) %>">
+                <a class="nav-link" href="<%= category_path(2) %>">Caribbean <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item <%= active_class(category_path(3)) %>">
+                <a class="nav-link" href="<%= category_path(3) %>">Chinese <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item <%= active_class(category_path(4)) %>">
+                <a class="nav-link" href="<%= category_path(4) %>">French <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item <%= active_class(category_path(5)) %>">
+                <a class="nav-link" href="<%= category_path(5) %>">Italian <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item <%= active_class(category_path(6)) %>">
+                <a class="nav-link" href="<%= category_path(6) %>">Mexican <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="nav-btn">
+        <%if logged_in?%>
+            <%= link_to "Write an article", new_article_path %>
+            <%= link_to "Logout", logout_path, method: :delete %>
+        <%else%>
+            <%= link_to "Login", login_path %>
+            <%= link_to "Register", new_user_path %>
+        <%end%>
+    </div>
+</nav>

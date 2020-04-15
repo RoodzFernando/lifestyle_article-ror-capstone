@@ -1,0 +1,55 @@
+@import './variables';
+.article-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .article-img {
+        width: 50%;
+        height: 320px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .article-content {
+        display: flex;
+    }
+    .article-text {
+        width: 50%;
+        word-wrap: break-word;
+        padding-left: 3%;
+        background-color: rgb(255, 255, 255);
+        h5 {
+            color: $orange;
+            text-decoration: underline;
+            text-decoration-color: $orange;
+            text-decoration-thickness: 2px;
+        }
+        h6 {
+            color: #000;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        a {
+            display: block;
+            color: $orange;
+            margin-top: 25px;
+        }
+    }
+}
+
+.article-content:nth-child(3) {
+    display: flex;
+    .article-text {
+        order: -1;
+    }
+}
+
+.article-content:nth-child(4) {
+    display: flex;
+    .article-text {
+        order: -1;
+    }
+}
