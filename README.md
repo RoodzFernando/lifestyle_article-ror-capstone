@@ -22,7 +22,7 @@ This project can be found in (https://github.com/RoodzFernando/lifestyle-ror-cap
 
 
 
-### ✨ [live version](https://nameless-reef-08582.herokuapp.com/)
+### ✨ [live version](http://recipe-book-ror-capstone.herokuapp.com/)
 
 ###   ![](app/assets/images/shots/img1.PNG)
 ###   ![](app/assets/images/shots/img2.PNG)
